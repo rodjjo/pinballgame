@@ -1,18 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="140" height="40" viewBox="0 0 140 40">
-  <!-- pinball flipper: fat pivot end on the LEFT, slim rounded tip on the RIGHT,
-       symmetric about the vertical centre line y=20. Pivot bolt sits at x=18. -->
+  <!-- Pinball flipper: fat pivot end on the LEFT (pivot at 18,20), slim rounded
+       tip on the right, symmetric about y=20. The body is ~26 tall at the
+       pivot, matching the collision box; the tip sits ~110 px out. -->
+  <!-- amber body -->
   <path d="M 18 7
            C 42 6 92 11 130 15
            C 136 16 136 24 130 25
            C 92 30 42 34 18 33
            C 11 32 11 8 18 7 Z"
-        fill="#f2a52a" stroke="#b9731a" stroke-width="1.6"/>
-  <!-- top highlight streak -->
-  <path d="M 24 11 C 55 10 92 14 122 18"
-        fill="none" stroke="#ffe9b0" stroke-width="2.6" stroke-linecap="round" opacity="0.9"/>
-  <!-- dark pivot bearing -->
-  <circle cx="18" cy="20" r="6.6" fill="#6f4510"/>
-  <circle cx="18" cy="20" r="3.4" fill="#3a250a"/>
-  <!-- tip cap highlight -->
-  <circle cx="127" cy="20" r="2.2" fill="#ffdfa0" opacity="0.9"/>
+        fill="#f4a831" stroke="#a8651a" stroke-width="1.4"/>
+  <!-- dark edge along the belly (bottom) -->
+  <path d="M 18 33 C 42 34 92 30 130 25"
+        fill="none" stroke="#b06a15" stroke-width="2" opacity="0.8"/>
+  <!-- bright sheen along the top edge -->
+  <path d="M 24 10.5 C 55 9.5 92 13.5 124 17.5"
+        fill="none" stroke="#ffe6ad" stroke-width="2.8" stroke-linecap="round" opacity="0.95"/>
+  <!-- faint centre ridge so the taper reads -->
+  <path d="M 26 20 C 60 19 100 20 126 20"
+        fill="none" stroke="#d18a22" stroke-width="1.2" opacity="0.55"/>
+  <!-- pivot bearing -->
+  <circle cx="18" cy="20" r="7" fill="#63400f"/>
+  <circle cx="18" cy="20" r="7" fill="none" stroke="#8a5a1c" stroke-width="1.5"/>
+  <circle cx="18" cy="20" r="3.6" fill="#33210a"/>
+  <ellipse cx="16.5" cy="17.5" rx="2.4" ry="1.3" fill="#c89a5a" opacity="0.8"
+           transform="rotate(-30 16.5 17.5)"/>
+  <!-- bright tip cap -->
+  <circle cx="131" cy="20" r="2.6" fill="#ffd9a0" opacity="0.95"/>
 </svg>

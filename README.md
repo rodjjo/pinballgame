@@ -301,6 +301,7 @@ lives in those files; the tools are summarised here in the release notes.
 | 2.12.0 | Added `tools/mid2ogg`, which renders a Standard MIDI File into an Ogg Vorbis (`.ogg`) sound file by playing it back against a SoundFont with TinySoundFont (the same path the game uses) and encoding the result with SFML. See [tools/mid2ogg.md](tools/mid2ogg.md). |
 | 2.13.0 | Replaced the load-time TinySoundFont MIDI→SoundFont synthesis with a pre-rendered Ogg Vorbis background track (`pinball_pirates.ogg`), played directly on loop via SFML. Removed the SoundFont and theme MIDI assets (`sound_file.sf2`, `flipper_fever.mid`, `texas_e_pacific_boogie_woogie_bass.mid`). |
 | 2.14.0 | Reworked the ball contact sound effects into realistic metallic impacts parameterised by impact speed: a broadband noise "crack" plus inharmonic, exponentially-decaying partials, so harder hits ring brighter and longer. Tonal note-language blips are kept for the plunger and ball drain. |
+| 2.15.0 | Refined all nine sprite art assets for a darker, richer look, and redesigned the background skull watermark as a full Jolly Roger (crossed bones, doubled canvas, same game-space position). |
 
 ### v1.2.0
 
@@ -577,6 +578,36 @@ The `svg2png` tool is built only when the project is configured with
   SFML audio device, each owning its own private voice bank. Impact effects are rendered per hit
   on the worker thread (no synthesis on the main loop) and reloaded into the next voice's buffer,
   so the hot path stays lock-free.
+
+### v2.15.0
+
+- **Art refresh for all nine sprites.** Every `assets/*.svg` art asset was reworked for a darker,
+  more layered look:
+  - `ball.svg` — smoother lower-right shadow falloff (two stacked shadow layers), a crisper
+    outer edge, and a fainter rim light; the steel tones read as one polished sphere.
+  - `bumper.svg` — eight studs set into the ring between the rim and the glow core, a darker ring
+    base, and refined concentric glow-band radii so the hot core stands out.
+  - `coin.svg` — two-layer star relief (dark under, bright over), brighter brass face, and a
+    lower rim-light arc for a more embossed look.
+  - `flipper.svg` — a dark belly edge, a faint centre ridge that makes the taper read, a larger
+    pivot bearing with rim and highlight, and a brighter tip cap.
+  - `glow.svg` — a finer additive gradient (ten concentric circles instead of seven) so the
+    ball halo and particle cores fade more smoothly to a transparent edge.
+  - `plunger.svg` — a mid-tone band so the pad reads as a cylinder, plus darker body and grip
+    tones.
+  - `valve.svg` — the plate is now a tapered path instead of a plain rect, the rivets gain tiny
+    highlights, and a hinge boss marks the pivot end.
+  - `wall.svg` — brighter top sheen, a deeper shadow band, and faint end caps so each rail reads
+    as a single polished piece.
+  - Each file now carries a documentation comment stating its origin point and the texel radius
+    the game scales onto the matching physics radius.
+- **Jolly Roger skull watermark.** `skull.svg` was redesigned as a full Jolly Roger: crossed bones
+  with knobby bone ends now sit behind the head, which gained a crack down the front of the
+  cranium, larger eye sockets, and a rounded mouth gap with more teeth septa. The canvas doubled
+  from 300x340 to 600x680 and the art is centred on the canvas, so the sprite origin moved from
+  `(150, 170)` to `(300, 340)` in `World.cpp`; the position `(320, 402)`, the 0.80 scale and the
+  faint alpha (110/255) are unchanged, so the watermark lands at the same game-space point but
+  renders ~480 px wide instead of ~240 px.
 
 ## License
 

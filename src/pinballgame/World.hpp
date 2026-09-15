@@ -113,7 +113,7 @@ private:
     // and the ball's particle effects (glow + sparks).
     Textures mTextures;
     Particles mParticles;
-    std::optional<sf::Sprite> mSkull;  // decorative background watermark
+    std::optional<sf::Sprite> mSkull;   // decorative background watermark
 
     // Input state.
     bool mLeftFlipper = false;

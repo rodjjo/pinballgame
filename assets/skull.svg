@@ -1,36 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="340" viewBox="0 0 300 340">
-  <!-- decorative skull watermark for the playfield background.
-       Body is lighter than the table so it reads faintly behind the action. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="680" viewBox="0 0 600 680">
+  <!-- Jolly Roger skull watermark for the playfield background. The art is
+       centred on the canvas so the sprite origin at (300,340) lands at the same
+       game-space point as before. Everything is drawn in a faint bone palette so
+       it reads as a low-key watermark behind the action. -->
 
-  <!-- bone body: cranium + jaw/cheek -->
-  <g stroke="#efe6cc" stroke-width="1.6" fill="#d8ceb2">
-    <ellipse cx="150" cy="106" rx="94" ry="98"/>
-    <ellipse cx="150" cy="222" rx="58" ry="56"/>
+  <!-- crossbones behind the head; the head is drawn in front -->
+  <g stroke="#8b8263" stroke-width="3" fill="#c2b79a">
+    <line x1="150" y1="150" x2="450" y2="580" stroke-width="26" fill="none"/>
+    <line x1="450" y1="150" x2="150" y2="580" stroke-width="26" fill="none"/>
+    <!-- knobby bone ends (two lobes per tip) -->
+    <circle cx="138.6" cy="158" r="17"/>
+    <circle cx="161.4" cy="142" r="17"/>
+    <circle cx="438.6" cy="142" r="17"/>
+    <circle cx="461.4" cy="158" r="17"/>
+    <circle cx="138.6" cy="588" r="17"/>
+    <circle cx="161.4" cy="572" r="17"/>
+    <circle cx="438.6" cy="572" r="17"/>
+    <circle cx="461.4" cy="588" r="17"/>
   </g>
 
-  <!-- temporal hollows (subtle side shading) -->
-  <ellipse cx="108" cy="150" rx="27" ry="35" fill="#b9ad8c" opacity="0.55"/>
-  <ellipse cx="192" cy="150" rx="27" ry="35" fill="#b9ad8c" opacity="0.55"/>
+  <!-- cranium -->
+  <g stroke="#8b8263" stroke-width="3" fill="#d8ceb2">
+    <ellipse cx="300" cy="305" rx="132" ry="135"/>
+    <!-- temporal hollows (subtle side shading) -->
+    <ellipse cx="214" cy="296" rx="22" ry="30" fill="#b9ad8c" opacity="0.5"/>
+    <ellipse cx="386" cy="296" rx="22" ry="30" fill="#b9ad8c" opacity="0.5"/>
+  </g>
+  <!-- faint crack down the front of the cranium -->
+  <path d="M300 176 L287 224 L297 262 L289 292" fill="none" stroke="#8b8263"
+        stroke-width="2.5" opacity="0.8"/>
 
-  <!-- eye sockets (read as dark holes) -->
-  <ellipse cx="112" cy="122" rx="17" ry="21" fill="#12141c" transform="rotate(-14 112 122)"/>
-  <ellipse cx="188" cy="122" rx="17" ry="21" fill="#12141c" transform="rotate(14 188 122)"/>
-  <!-- socket rims -->
-  <ellipse cx="112" cy="122" rx="17" ry="21" fill="none" stroke="#8b8263" stroke-width="1.6" transform="rotate(-14 112 122)"/>
-  <ellipse cx="188" cy="122" rx="17" ry="21" fill="none" stroke="#8b8263" stroke-width="1.6" transform="rotate(14 188 122)"/>
+  <!-- jaw / cheek -->
+  <g stroke="#8b8263" stroke-width="3" fill="#d8ceb2">
+    <ellipse cx="300" cy="440" rx="104" ry="92"/>
+  </g>
+  <ellipse cx="300" cy="468" rx="44" ry="20" fill="#b3a784" opacity="0.5"/>
+
+  <!-- eye sockets -->
+  <ellipse cx="246" cy="322" rx="30" ry="36" fill="#14161e"
+           transform="rotate(-8 246 322)"/>
+  <ellipse cx="246" cy="322" rx="30" ry="36" fill="none" stroke="#8b8263"
+           stroke-width="2.5" transform="rotate(-8 246 322)"/>
+  <ellipse cx="354" cy="322" rx="30" ry="36" fill="#14161e"
+           transform="rotate(8 354 322)"/>
+  <ellipse cx="354" cy="322" rx="30" ry="36" fill="none" stroke="#8b8263"
+           stroke-width="2.5" transform="rotate(8 354 322)"/>
 
   <!-- nose cavity -->
-  <path d="M143 160 L157 160 L152 180 L148 180 Z" fill="#12141c" stroke="#8b8263" stroke-width="1.4"/>
-
-  <!-- cheek / jaw shading under the teeth -->
-  <ellipse cx="150" cy="258" rx="40" ry="20" fill="#b3a784" opacity="0.5"/>
+  <path d="M283 352 L317 352 L300 392 Z" fill="#14161e"
+        stroke="#8b8263" stroke-width="2.5"/>
 
   <!-- teeth: dark mouth gap with bone septa -->
-  <rect x="120" y="232" width="60" height="16" fill="#12141c"/>
-  <g stroke="#8b8263" stroke-width="1.6">
-    <line x1="132" y1="233" x2="132" y2="247"/>
-    <line x1="144" y1="233" x2="144" y2="247"/>
-    <line x1="156" y1="233" x2="156" y2="247"/>
-    <line x1="168" y1="233" x2="168" y2="247"/>
+  <rect x="234" y="404" width="132" height="36" rx="10" fill="#14161e"/>
+  <g stroke="#8b8263" stroke-width="2.5">
+    <line x1="252" y1="406" x2="252" y2="438"/>
+    <line x1="270" y1="406" x2="270" y2="438"/>
+    <line x1="288" y1="406" x2="288" y2="438"/>
+    <line x1="306" y1="406" x2="306" y2="438"/>
+    <line x1="324" y1="406" x2="324" y2="438"/>
+    <line x1="342" y1="406" x2="342" y2="438"/>
   </g>
 </svg>

@@ -1,9 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="56" height="26" viewBox="0 0 56 26">
-  <!-- plunger launch pad: rounded bar, origin at centre. Pressed = darker,
-       released = brighter. -->
+  <!-- Plunger launch pad: rounded red bar with a glossy top band and a dark
+       grip line. Origin at centre (28,13); the engine tints it while charged. -->
+  <!-- body -->
   <rect x="2" y="2" width="52" height="22" rx="10" ry="10"
-        fill="#e8543c" stroke="#a22e1e" stroke-width="1.6"/>
-  <rect x="6" y="5" width="44" height="7" rx="4" ry="4"
-        fill="#ff9a82" opacity="0.9"/>
-  <line x1="10" y1="18" x2="46" y2="18" stroke="#b8362a" stroke-width="2" stroke-linecap="round"/>
+        fill="#e04a30" stroke="#8f2418" stroke-width="1.6"/>
+  <!-- glossy top band -->
+  <rect x="7" y="5" width="42" height="7" rx="3.5" ry="3.5"
+        fill="#ff9d84" opacity="0.9"/>
+  <!-- soft mid tone so the body reads as a cylinder -->
+  <rect x="6" y="13" width="44" height="6" rx="3" ry="3"
+        fill="#c23d27" opacity="0.85"/>
+  <!-- dark grip groove -->
+  <line x1="11" y1="18" x2="45" y2="18" stroke="#8f2418" stroke-width="2" stroke-linecap="round"/>
 </svg>

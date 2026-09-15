@@ -1,11 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <!-- soft radial glow (drawn additively). Bright centre fading to a
-       transparent edge. Used for the ball halo and particle cores. -->
-  <circle cx="32" cy="32" r="31" fill="#ffffff" opacity="0.02"/>
-  <circle cx="32" cy="32" r="26" fill="#ffffff" opacity="0.10"/>
-  <circle cx="32" cy="32" r="21" fill="#ffffff" opacity="0.22"/>
-  <circle cx="32" cy="32" r="16" fill="#ffffff" opacity="0.42"/>
-  <circle cx="32" cy="32" r="11" fill="#ffffff" opacity="0.68"/>
-  <circle cx="32" cy="32" r="6"  fill="#ffffff" opacity="0.92"/>
-  <circle cx="32" cy="32" r="2.5" fill="#ffffff" opacity="1"/>
+  <!-- Soft radial glow (drawn additively): a bright centre fading smoothly to a
+       transparent edge. Used for the ball halo, bumper flashes and particle
+       cores; the engine tints it per use. Origin at centre (32,32). -->
+  <circle cx="32" cy="32" r="31" fill="#ffffff" opacity="0.03"/>
+  <circle cx="32" cy="32" r="27" fill="#ffffff" opacity="0.09"/>
+  <circle cx="32" cy="32" r="23.5" fill="#ffffff" opacity="0.17"/>
+  <circle cx="32" cy="32" r="20" fill="#ffffff" opacity="0.28"/>
+  <circle cx="32" cy="32" r="16.5" fill="#ffffff" opacity="0.42"/>
+  <circle cx="32" cy="32" r="13" fill="#ffffff" opacity="0.58"/>
+  <circle cx="32" cy="32" r="9.5" fill="#ffffff" opacity="0.76"/>
+  <circle cx="32" cy="32" r="6" fill="#ffffff" opacity="0.9"/>
+  <circle cx="32" cy="32" r="3" fill="#ffffff" opacity="0.98"/>
+  <circle cx="32" cy="32" r="1.2" fill="#ffffff"/>
 </svg>
