@@ -151,5 +151,5 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../assets/fonts/DejaVuSans.ttf
 
 # Copy the background music asset (Ogg Vorbis track) next to the executable so it
 # can be found at runtime (see Game's resolveSoundFile).
-file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../assets/sounds/pinball_pirates.ogg
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../assets/sounds/pinball_music.ogg
      DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/sounds)

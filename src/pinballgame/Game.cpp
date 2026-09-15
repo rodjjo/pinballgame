@@ -60,8 +60,8 @@ namespace
     // Background music asset: an Ogg Vorbis track played on loop. It lives in the
     // game's sound assets and is copied next to the executable at build time (see
     // src/CMakeLists.txt).
-    const char* kMusicOggName = "sounds/pinball_pirates.ogg";
-    const char* kSourceMusicOggName = "assets/sounds/pinball_pirates.ogg";
+    const char* kMusicOggName = "sounds/pinball_music.ogg";
+    const char* kSourceMusicOggName = "assets/sounds/pinball_music.ogg";
 
     // Find a sound asset, preferring the copy next to the executable and falling
     // back to the source-tree location (useful when run from the project root).

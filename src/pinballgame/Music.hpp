@@ -8,7 +8,7 @@ namespace pinballgame
 {
 // Continuous background music.
 //
-// The Ogg Vorbis track (pinball_pirates.ogg) is loaded directly into an
+// The Ogg Vorbis track (pinball_music.ogg) is loaded directly into an
 // sf::SoundBuffer and played on loop through an sf::Sound. We rely on SFML's
 // built-in Vorbis codec rather than synthesising audio from a MIDI file and a
 // SoundFont, which keeps the implementation small and cheap at load time.
