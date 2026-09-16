@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="680" viewBox="0 0 600 680">
+  <!-- Colorful electric guitar watermark (triangle body with round details).
+       The triangle is narrow where it meets the neck (the "small part" by
+       the arm) and widens toward the tail, where the bridge sits.
+       Same 600x680 canvas with the art centred on (300,340) so the sprite
+       origin/position/scale in World.cpp land it at the same game-space point
+       the Jolly Roger skull occupied. -->
+
+  <!-- neck (dark wood) -->
+  <rect x="282" y="96" width="36" height="184" fill="#6b4423"
+        stroke="#3f2713" stroke-width="3"/>
+
+  <!-- frets -->
+  <g stroke="#d9d2c4" stroke-width="2.5">
+    <line x1="282" y1="128" x2="318" y2="128"/>
+    <line x1="282" y1="152" x2="318" y2="152"/>
+    <line x1="282" y1="178" x2="318" y2="178"/>
+    <line x1="282" y1="206" x2="318" y2="206"/>
+    <line x1="282" y1="236" x2="318" y2="236"/>
+    <line x1="282" y1="268" x2="318" y2="268"/>
+  </g>
+
+  <!-- headstock (black) -->
+  <path d="M282 96 L318 96 L330 26 L270 26 Z" fill="#23252e"
+        stroke="#0f1015" stroke-width="3"/>
+
+  <!-- nut (bone) -->
+  <rect x="278" y="88" width="44" height="10" fill="#f7e8c8"
+        stroke="#b9a26e" stroke-width="2"/>
+
+  <!-- tuning pegs: round details, three per side -->
+  <g fill="#cfd6df" stroke="#6d7683" stroke-width="2">
+    <circle cx="256" cy="44" r="8"/>
+    <circle cx="256" cy="62" r="8"/>
+    <circle cx="256" cy="80" r="8"/>
+    <circle cx="344" cy="44" r="8"/>
+    <circle cx="344" cy="62" r="8"/>
+    <circle cx="344" cy="80" r="8"/>
+  </g>
+
+  <!-- triangle body: narrow at the neck, wide at the tail, rounded corners -->
+  <path d="M272 272 L328 272 Q336 272 340 282 L462 582 Q468 598 450 598
+          L150 598 Q132 598 138 582 L260 282 Q264 272 272 272 Z"
+        fill="#e63946" stroke="#9c1c27" stroke-width="4"/>
+
+  <!-- subtle inner highlight on the body -->
+  <path d="M278 292 L322 292 L300 560 Z" fill="#f2616e" opacity="0.4"/>
+
+  <!-- round pickguard (cream) -->
+  <circle cx="300" cy="400" r="62" fill="#f7e8c8"
+          stroke="#b9a26e" stroke-width="3"/>
+
+  <!-- round pickups (dark with silver ring) -->
+  <circle cx="300" cy="322" r="26" fill="#10131a"
+          stroke="#cfd6df" stroke-width="3"/>
+  <circle cx="300" cy="462" r="30" fill="#10131a"
+          stroke="#cfd6df" stroke-width="3"/>
+
+  <!-- bridge (silver) -->
+  <rect x="272" y="520" width="56" height="14" rx="7" fill="#cfd6df"
+        stroke="#6d7683" stroke-width="2"/>
+
+  <!-- output jack: round detail (silver with dark hole) -->
+  <circle cx="300" cy="560" r="14" fill="#cfd6df" stroke="#6d7683" stroke-width="2"/>
+  <circle cx="300" cy="560" r="6" fill="#10131a"/>
+
+  <!-- two round knobs (gold), tucked into the lower-right edge -->
+  <circle cx="392" cy="436" r="13" fill="#f2c14e" stroke="#b98b2e" stroke-width="2"/>
+  <circle cx="380" cy="474" r="12" fill="#f2c14e" stroke="#b98b2e" stroke-width="2"/>
+
+  <!-- six strings: nut -> bridge -->
+  <g stroke="#f5f7fa" stroke-width="1.6">
+    <line x1="288" y1="90" x2="276" y2="520"/>
+    <line x1="293" y1="90" x2="285" y2="520"/>
+    <line x1="298" y1="90" x2="294" y2="520"/>
+    <line x1="303" y1="90" x2="303" y2="520"/>
+    <line x1="308" y1="90" x2="312" y2="520"/>
+    <line x1="313" y1="90" x2="321" y2="520"/>
+  </g>
+</svg>

@@ -231,15 +231,15 @@ World::World(int /*windowWidth*/, int /*windowHeight*/)
         // only the glow, not the whole atlas.
         mParticles.setGlowTexture(&mTextures.texture(), mTextures.rect("glow"));
 
-        // Decorative Jolly Roger skull watermark: centred on the bumper cluster.
+        // Decorative electric guitar watermark: centred on the bumper cluster.
         // The art is drawn on a 600x680 canvas centred on the sprite origin, so
-        // the origin (300,340) lands at the same game-space point as before; at
-        // 0.8x scale it renders ~480 px wide.
-        mSkull = mTextures.get("skull");
-        mSkull->setOrigin(sf::Vector2f(300.f, 340.f));                // centre of the 600x680 art
-        mSkull->setPosition(sf::Vector2f(320.f, 402.f));
-        mSkull->setScale(sf::Vector2f(0.80f, 0.80f));                // ~480 px wide
-        mSkull->setColor(sf::Color(255, 255, 255, 110)); // faint watermark
+        // the origin (300,340) lands at the same game-space point the skull
+        // occupied; at 0.8x scale it renders ~480 px wide.
+        mGuitar = mTextures.get("guitar");
+        mGuitar->setOrigin(sf::Vector2f(300.f, 340.f));                // centre of the 600x680 art
+        mGuitar->setPosition(sf::Vector2f(320.f, 402.f));
+        mGuitar->setScale(sf::Vector2f(0.80f, 0.80f));                // ~480 px wide
+        mGuitar->setColor(sf::Color(255, 255, 255, 110)); // faint watermark
     }
 
     reset();
@@ -402,9 +402,9 @@ void World::render(sf::RenderWindow& window) const
 
 void World::renderBackground(sf::RenderWindow& window) const
 {
-    if (mTextures.loaded() && mSkull)
+    if (mTextures.loaded() && mGuitar)
     {
-        window.draw(*mSkull);
+        window.draw(*mGuitar);
     }
 }
 
